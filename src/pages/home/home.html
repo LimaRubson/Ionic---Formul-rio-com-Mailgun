@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Enviar sugestão através do serviço Mailgun</ion-title>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content class="home">
+    <ion-list>
+        <ion-item>
+            <ion-label floating>E-mail:</ion-label>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Nome:</ion-label>
+            <ion-input type="text" [(ngModel)]="nome"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Mensagem:</ion-label>
+            <ion-textarea [(ngModel)]="mensagem"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button ion-button (click)="send(email, nome, mensagem)">Enviar Sugestão</button>
+    </div>
+</ion-content>
